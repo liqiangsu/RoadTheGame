@@ -4,7 +4,8 @@ namespace Road.Models
 {
     public class Card
     {
-        public int ID { get; set; }
+        static int currectId = 0;
+        public int ID { get; set; } = currectId++;
         public string Name { get; set; }
         public CardType Type { get; set; }
         public string Description { get; set; }

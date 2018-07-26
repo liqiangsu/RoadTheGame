@@ -8,14 +8,14 @@ namespace Road.Models
     public class RoadMap
     {
         public int CurrenctPosition { get; set; }
-        public LinkedList<RoadPoint> Map { get; set; } = new LinkedList<RoadPoint>();
+        public List<RoadPoint> Map { get; set; } = new List<RoadPoint>() { new RoadPoint(new StartPoint()) };
 
         public RoadPoint CurrectRoadPoint => Map.ElementAt(CurrenctPosition);
 
         public void MoveNext(Card card)
         {
             CurrenctPosition++;
-            Map.AddLast(new RoadPoint(card));
+            Map.Add(new RoadPoint(card));
         }
 
         public void MoveBack(int numberOfStep)

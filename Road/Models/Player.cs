@@ -10,7 +10,8 @@ namespace Road.Models
         public int Money { get; set; } = 10000;
         public int MovesAviable { get; set; } = 2;
         public RoadMap RoadMap { get; set; } = new RoadMap();
-        
+        public int Id { get; internal set; }
+
         public List<Card> DrawCards(int numberOfCard = 2)
         {
             var cards = new List<Card>();
